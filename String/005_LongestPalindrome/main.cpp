@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include "longestPalindrome.cpp"
+#include "longestPalindrome.h"
 
 void Test(string func(string s), string s, string result)
 {

@@ -5,6 +5,9 @@
 #include <iostream>
 using namespace std;
 
+// 解法：数学推理，在最后一次乘 10 前判断是否溢出
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
 int reverse(int x)
 {
     int res = 0;

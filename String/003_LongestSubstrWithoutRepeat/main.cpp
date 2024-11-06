@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include "longestSubstr.cpp"
+#include "longestSubstr.h"
 
 void Test(int func(string s), string s, int result)
 {

@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include "reverseInteger.cpp"
+#include "reverseInteger.h"
 
 void Test(int func(int x), int x, int result)
 {
