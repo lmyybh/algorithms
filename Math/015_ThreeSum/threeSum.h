@@ -8,8 +8,8 @@
 
 using namespace std;
 
-// 解法：模拟，从左到右依次转为数字，需要处理左边数字比右边数字小的情况
-// 时间复杂度：O(n)
+// 解法：排序+双指针，选定第一个数，双指针遍历其他两数
+// 时间复杂度：O(n2)
 // 空间复杂度：O(1)
 vector<vector<int>> threeSum(vector<int> &nums)
 {
