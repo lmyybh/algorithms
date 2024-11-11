@@ -12,15 +12,15 @@ struct ListNode
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-class LinkedList
+class LinkList
 {
 public:
-    LinkedList() : head(nullptr) {}
-    LinkedList(ListNode *_head)
+    LinkList() : head(nullptr) {}
+    LinkList(ListNode *_head)
     {
         copy_from_head(_head);
     }
-    LinkedList(initializer_list<int> nums)
+    LinkList(initializer_list<int> nums)
     {
         if (nums.size() == 0)
         {
@@ -32,21 +32,21 @@ public:
             insert(*it);
     }
 
-    ~LinkedList()
+    ~LinkList()
     {
         clear();
     }
 
     // 拷贝构造函数
-    LinkedList(const LinkedList &list)
+    LinkList(const LinkList &list)
     {
         copy_from_head(list.head);
     }
 
     // 拷贝赋值运算符
-    LinkedList &operator=(const LinkedList &list)
+    LinkList &operator=(const LinkList &list)
     {
-        // LinkedList temp(list); // 复制，防止自我赋值时释放两次
+        // LinkList temp(list); // 复制，防止自我赋值时释放两次
         copy_from_head(list.head);
 
         return *this;
@@ -96,7 +96,7 @@ public:
     ListNode *head = nullptr;
 };
 
-bool operator==(const LinkedList &lhs, const LinkedList &rhs)
+bool operator==(const LinkList &lhs, const LinkList &rhs)
 {
     ListNode *l = lhs.head;
     ListNode *r = rhs.head;
@@ -112,12 +112,12 @@ bool operator==(const LinkedList &lhs, const LinkedList &rhs)
     return (!l) && (!r);
 }
 
-bool operator!=(const LinkedList &lhs, const LinkedList &rhs)
+bool operator!=(const LinkList &lhs, const LinkList &rhs)
 {
     return !(lhs == rhs);
 }
 
-ostream &operator<<(ostream &os, const LinkedList &list)
+ostream &operator<<(ostream &os, const LinkList &list)
 {
     ListNode *cur = list.head;
     while (cur != nullptr)

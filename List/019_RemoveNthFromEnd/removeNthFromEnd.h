@@ -3,8 +3,11 @@
  * 链接：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/
  */
 #include <vector>
-#include "linkedList.h"
+#include "linkList.h"
 
+// 解法：快慢指针
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
 ListNode *removeNthFromEnd(ListNode *head, int n)
 {
     ListNode *dummy = new ListNode(0, head);

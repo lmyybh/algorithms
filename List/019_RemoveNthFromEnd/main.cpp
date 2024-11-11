@@ -6,7 +6,7 @@
 #include <iostream>
 #include "removeNthFromEnd.h"
 
-void Test(ListNode *(*func)(ListNode *, int), LinkedList list, int n, LinkedList result)
+void Test(ListNode *(*func)(ListNode *, int), LinkList list, int n, LinkList result)
 {
     list.head = func(list.head, n);
 
