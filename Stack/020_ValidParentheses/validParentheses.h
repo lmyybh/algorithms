@@ -8,8 +8,19 @@
 
 using namespace std;
 
+// 解法：栈
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)
 bool isValid(string s)
 {
+    if (s.length() % 2 != 0)
+        return false;
+
+    auto match = [](char a, char b)
+    {
+        return (a == '(' && b == ')') || (a == '{' && b == '}') || (a == '[' && b == ']');
+    };
+
     stack<char> charStack;
     for (char c : s)
     {
@@ -17,29 +28,13 @@ bool isValid(string s)
             charStack.push(c);
         else
         {
-            switch (c)
-            {
-            case ')':
-                if (!charStack.empty() && charStack.top() == '(')
-                    charStack.pop();
-                else
-                    return false;
-                break;
-            case '}':
-                if (!charStack.empty() && charStack.top() == '{')
-                    charStack.pop();
-                else
-                    return false;
-                break;
-            case ']':
-                if (!charStack.empty() && charStack.top() == '[')
-                    charStack.pop();
-                else
-                    return false;
-                break;
-            default:
-                break;
-            }
+            if (charStack.empty())
+                return false;
+
+            if (!match(charStack.top(), c))
+                return false;
+
+            charStack.pop();
         }
     }
 
