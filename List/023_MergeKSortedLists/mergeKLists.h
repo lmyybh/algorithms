@@ -1,6 +1,6 @@
 /*
- * 题目：21. 合并两个有序链表
- * 链接：https://leetcode.cn/problems/merge-two-sorted-lists/description/
+ * 题目：23. 合并 K 个升序链表
+ * 链接：https://leetcode.cn/problems/merge-k-sorted-lists/description/
  */
 
 #include <vector>

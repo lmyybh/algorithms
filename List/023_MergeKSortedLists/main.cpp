@@ -1,5 +1,5 @@
 /*
- * 题目：22. 合并 K 个升序链表
+ * 题目：23. 合并 K 个升序链表
  * 链接：https://leetcode.cn/problems/merge-k-sorted-lists/description/
  */
 
