@@ -98,15 +98,13 @@ ListNode *mergeKLists_v3(vector<ListNode *> &lists)
     if (lists.empty())
         return nullptr;
 
-    struct Compare
+    auto compare = [](const ListNode *a, const ListNode *b)
     {
-        bool operator()(ListNode *a, ListNode *b)
-        {
-            return a->val > b->val;
-        }
+        return a->val > b->val;
     };
 
-    priority_queue<ListNode *, vector<ListNode *>, Compare> pq;
+    // 需要 C++20
+    priority_queue<ListNode *, vector<ListNode *>, decltype(compare)> pq;
 
     for (auto node : lists)
     {
@@ -114,8 +112,8 @@ ListNode *mergeKLists_v3(vector<ListNode *> &lists)
             pq.push(node);
     }
 
-    ListNode *dummy = new ListNode(-1);
-    ListNode *cur = dummy;
+    ListNode dummy = ListNode(-1);
+    ListNode *cur = &dummy;
     while (!pq.empty())
     {
         ListNode *node = pq.top();
@@ -128,5 +126,5 @@ ListNode *mergeKLists_v3(vector<ListNode *> &lists)
         }
     }
 
-    return dummy->next;
+    return dummy.next;
 }
