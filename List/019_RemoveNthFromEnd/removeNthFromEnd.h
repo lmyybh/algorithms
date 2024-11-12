@@ -3,7 +3,7 @@
  * 链接：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/
  */
 #include <vector>
-#include "linkList.h"
+#include "../../utils/linkList.h"
 
 // 解法：快慢指针
 // 时间复杂度：O(n)

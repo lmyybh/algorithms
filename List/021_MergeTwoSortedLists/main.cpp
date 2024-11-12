@@ -8,12 +8,12 @@
 
 void Test(ListNode *func(ListNode *, ListNode *), LinkList list1, LinkList list2, LinkList result)
 {
-    ListNode *head = func(list1.head, list2.head);
+    list1.changeFirstNode(func(list1.firstNode(), list2.firstNode())); // 此时 list1 和 list2 存在共同节点
+    list2.changeFirstNode(nullptr);                                    // list2 头节点指向 nullptr，避免析构时二次释放内存
 
-    LinkList res(head);
-    if (res != result)
+    if (list1 != result)
     {
-        cerr << "result error: " << res << " != " << result << endl;
+        cerr << "result error: " << list1 << " != " << result << endl;
         return;
     }
 

@@ -4,7 +4,7 @@
  */
 
 #include <vector>
-#include "linkList.h"
+#include "../../utils/linkList.h"
 
 // 解法一：递归
 // 时间复杂度：O(m+n)

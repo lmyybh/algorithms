@@ -8,7 +8,7 @@
 
 void Test(ListNode *(*func)(ListNode *, int), LinkList list, int n, LinkList result)
 {
-    list.head = func(list.head, n);
+    list.changeFirstNode(func(list.firstNode(), n));
 
     if (list != result)
     {
