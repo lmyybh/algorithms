@@ -6,23 +6,9 @@
 #include <iostream>
 #include <sstream>
 #include "nextPermutation.h"
+#include "../../utils/str.h"
 
 using namespace std;
-
-string vectorToString(vector<int> &v)
-{
-    ostringstream os;
-    os << "[";
-    for (auto it = v.cbegin(); it != v.cend(); ++it)
-    {
-        os << *it;
-        if (it != v.cend() - 1)
-            os << ", ";
-    }
-    os << "]";
-
-    return os.str();
-}
 
 void Test(void func(vector<int> &), vector<int> nums, vector<int> result)
 {
