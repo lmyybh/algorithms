@@ -21,7 +21,7 @@ void Test(bool func(vector<vector<char>> &), vector<vector<char>> board, bool re
 
 int main()
 {
-    bool (*func)(vector<vector<char>> &) = isValidSudoku;
+    bool (*func)(vector<vector<char>> &) = isValidSudoku_v2;
 
     vector<vector<char>> board = {
         {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
