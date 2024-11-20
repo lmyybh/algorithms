@@ -19,3 +19,26 @@ string vectorToString(vector<T> &v)
 
     return os.str();
 }
+
+template <typename T>
+string Vector2dToString(vector<vector<T>> &vec)
+{
+    ostringstream os;
+    os << "[";
+    for (auto it = vec.cbegin(); it != vec.cend(); ++it)
+    {
+        os << "[";
+        for (auto cb = (*it).cbegin(); cb != (*it).cend(); ++cb)
+        {
+            os << *cb;
+            if (cb != (*it).cend() - 1)
+                os << ", ";
+        }
+        os << "]";
+        if (it != vec.cend() - 1)
+            os << ", ";
+    }
+    os << "]";
+
+    return os.str();
+}
