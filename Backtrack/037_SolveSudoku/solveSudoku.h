@@ -7,6 +7,10 @@
 
 using namespace std;
 
+// 解法：回溯，在每一个空格上，回溯遍历每个合法的数字
+// 时间复杂度：O(9^(9*9)) 复杂度上界，最多有 9*9 个格子，每个格子可以填入 9 个数之一
+// 空间复杂度：O(9^(9*9))
+
 // 判断在 (row, col) 填入数字 val 后，数独是否合法
 bool isValid(vector<vector<char>> &board, int row, int col, int val)
 {
