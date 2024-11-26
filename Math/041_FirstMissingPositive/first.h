@@ -8,6 +8,9 @@
 
 using namespace std;
 
+// 解法：原地哈希，首先交换整数 x 到数组中 x-1 位置，随后遍历找到第一个位置不符合的数
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
 int firstMissingPositive(vector<int> &nums)
 {
     int min = INT_MAX;

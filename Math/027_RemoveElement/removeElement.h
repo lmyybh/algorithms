@@ -25,7 +25,7 @@ int removeElement_v1(vector<int> &nums, int val)
     return slow - nums.begin();
 }
 
-// 解法一：快慢指针优化，快指针从右向左，赋值给慢指针为 val 的位置
+// 解法二：快慢指针优化，快指针从右向左，赋值给慢指针为 val 的位置
 // 时间复杂度：O(n)
 // 空间复杂度：O(1)
 int removeElement_v2(vector<int> &nums, int val)
