@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// 解法：按规则判断，注意溢出
+// 解法：按规则转换，每次新增数字前都需要判断是否会溢出
 // 时间复杂度: O(n)
 // 空间复杂度：O(1)
 int myAtoi(string s)

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// 解法一：借助栈匹配括号，找最长字串
+// 解法一：借助栈匹配括号，找最长子串
 // 时间复杂度：O(n)
 // 空间复杂度：O(n)
 int longestValidParentheses_v1(string s)
