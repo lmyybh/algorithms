@@ -42,3 +42,13 @@ string Vector2dToString(vector<vector<T>> &vec)
 
     return os.str();
 }
+
+template <typename T>
+void sortVector2d(vector<vector<T>> &vec)
+{
+    for (auto &v : vec)
+    {
+        sort(v.begin(), v.end());
+    }
+    sort(vec.begin(), vec.end());
+}
