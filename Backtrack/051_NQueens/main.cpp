@@ -23,7 +23,7 @@ void Test(vector<vector<string>> func(int), int n, vector<vector<string>> result
 
 int main()
 {
-    vector<vector<string>> (*func)(int) = solveNQueens;
+    vector<vector<string>> (*func)(int) = solveNQueens_v2;
 
     Test(func, 4, {{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}});
     Test(func, 1, {{"Q"}});
